@@ -85,7 +85,7 @@ ul {
   justify-content: center;
 }
 
-.status {
+#readbtn {
   border: none;
   cursor: pointer;
   font-family: "Poppins", sans-serif;

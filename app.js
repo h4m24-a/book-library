@@ -1,6 +1,7 @@
 const addbookbtn = document.getElementById("new-book-btn");
 const form = document.getElementById("form");
 const formwrap = document.getElementById("form-wrapper")
+const readbtn = document.getElementById("readbtn")
 
 
 let myLibrary = [];
@@ -22,3 +23,11 @@ addbookbtn.addEventListener('click', displayForm);
 function displayForm () {
     form.style.display = 'block';
 }
+
+
+
+
+// Change status - Read or Not
+readbtn.addEventListener('click', function () {
+    readbtn.textContent = 'Not Read';
+  });
