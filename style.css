@@ -63,7 +63,7 @@ ul {
   margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -113,18 +113,18 @@ ul {
   margin: 5px;
 }
 
-.card .input-groups {
+/* .card .input-groups {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
   font-family: "Rubik", sans-serif;
-}
+} */
 
 .newbook {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #new-book-btn {
@@ -134,14 +134,75 @@ ul {
   font-weight: 500;
   color: #fff;
   cursor: pointer;
-  background-image: linear-gradient(to right, #e052a0, #f15c41) !important;
+  background-color: rgb(28, 149, 248);
   border-radius: 3px;
   padding: 16px 18px 15px;
   white-space: nowrap;
 }
 
 
-#new-book-btn :hover {
-    background-color: #e6375a;
-    background-image: none !important;
-  }
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#form-wrapper {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+	height: 40%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #fd7846;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+input {
+	font-family: "Rubik", sans-serif;
+	background: #fd7846;
+	border: 1px solid;
+	font-size: 24px;
+	margin: 1rem;
+	text-align: center;
+	color: black;
+}
+
+
+
+label {
+	font-family: "Rubik", sans-serif;
+	font-size: 24px;
+	color: black;
+}
+
+#addbook {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+#sumbitbtn {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+	cursor: pointer;
+	padding: 0 24px;
+	border-radius: 10px;
+	height: 50px;
+	font-size: 18px;
+	background-color: #fec219;
+	color: #222;
+	
+}
