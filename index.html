@@ -42,9 +42,13 @@
   
           <label class="input" for="pages"></label>
           <input type="text" id="pages" placeholder="Pages">
-  
-          <label class="input" for="read">Read </label>
-          <input type="checkbox" name="read" id="read" />
+
+          <label for="readstatus">Status</label>
+          <select name="readstatus" id="readstatus">
+            <option name="read" id="read" value="Read">Read</option>
+            <option name="notread" id="notread" value="Not Read">Not Read</option>
+          </select>
+          
 
           <button id="sumbitbtn" type="submit">Add Book</button>
          </form>    
