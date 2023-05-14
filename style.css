@@ -217,14 +217,14 @@ select {
 }
 
 #booktable {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 110%;
 }
 
 #booktable td, #booktable th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 12px;
 }
 
 #booktable tr{background-color: #f4f6fb;}
@@ -233,11 +233,12 @@ select {
 #booktable tr:hover {background-color: #eaf3d7;}
 
 #booktable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px;
   text-align: left;
   background-color: #2E4053;
   color: white;
+  font-size: 20px;
+  font-family: 'Rubik', Helvetica, sans-serif;
 }
 
 #removebtn {
