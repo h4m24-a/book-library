@@ -240,7 +240,7 @@ select {
   color: white;
 }
 
-.removebtn {
+#removebtn {
   text-align: center;
   outline: 0;
   cursor: pointer;
@@ -254,12 +254,12 @@ select {
   font-size: 16px;
 }
 
-.removebtn :hover{
+#removebtn :hover{
   background: 0 0;
   color: #ff4742;
 }
 
-.readbtn {
+#readbutton {
   text-align: center;
   outline: 0;
   cursor: pointer;
@@ -273,7 +273,7 @@ select {
   font-size: 16px;
 }
 
-.readbtn  :hover {
+#readbutton  :hover {
   transition: all .1s ease;
   box-shadow: 0 0 0 0 #fff, 0 0 0 3px #2ECC71;
 }
