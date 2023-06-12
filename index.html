@@ -43,11 +43,8 @@
           <label class="input" for="pages"></label>
           <input type="text" id="pages" placeholder="Pages">
 
-          <label for="readstatus">Status</label>
-          <select name="readstatus" id="readstatus">
-            <option name="read" id="read" value="Read">Read</option>
-            <option name="notread" id="notread" value="Not Read">Not Read</option>
-          </select>
+          <label for="read">Read</label>
+          <input type="checkbox" id="read">
           
 
           <button id="sumbitbtn" type="submit">Add Book</button>
@@ -63,9 +60,10 @@
             <th>Title</th>
             <th>Author</th>
             <th>Pages</th>
-            <th>Status</th>
+            <th>Read</th>
             <th>Remove</th>
           </tr>
+
           <!-- <tr>
             <td>The Hunger Games</td>
             <td>Suzanne Collins</td>
@@ -73,10 +71,8 @@
             <td><button id="readbutton">Read</button></td>
             <td><button id="removebtn">Remove</button></td>
           </tr> -->
+          
         </table>
-
-
-
       </div>
     </main>
 
