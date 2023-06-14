@@ -25,15 +25,14 @@ function addBookToLibrary() {
 }
 
 
-function addBooksManually() {
-  let book1 = new Book("The Catcher in the Rye", "J.D. Salinger", 224, "Read");
-  let book2 = new Book("To Kill a Mockingbird", "Harper Lee", 281, "Not Read");
-  let book3 = new Book("1984", "George Orwell", 328, "Read");
+  const book1 = new Book("The Catcher in the Rye", "J.D. Salinger", 224, "Read");
+  const book2 = new Book("To Kill a Mockingbird", "Harper Lee", 281, "Not Read");
+  const book3 = new Book("1984", "George Orwell", 328, "Read");
 
-  myLibrary.push(book1, book2, book3);
-}
+myLibrary.push(book1, book2, book3);
 
-addBooksManually();
+
+
 
 
 
