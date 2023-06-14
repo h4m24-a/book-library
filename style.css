@@ -67,19 +67,6 @@ ul {
   align-items: center;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 2rem;
-  border-radius: 8px;
-  width: 280px;
-  height: 380px;
-  background: rgb(236, 236, 236);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
 .buttons {
   display: flex;
   justify-content: center;
@@ -113,13 +100,6 @@ ul {
   margin: 5px;
 }
 
-/* .card .input-groups {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
-  font-family: "Rubik", sans-serif;
-} */
 
 .newbook {
   display: flex;
@@ -231,7 +211,7 @@ select {
 #booktable tr{background-color: #f4f6fb;}
 
 
-#booktable tr:hover {background-color: #eaf3d7;}
+#booktable tr:hover {background-color: #e7ebdf;}
 
 #booktable th {
   padding: 12px;
@@ -242,7 +222,7 @@ select {
   font-family: 'Rubik', Helvetica, sans-serif;
 }
 
-#removebtn {
+.remove-button {
   text-align: center;
   outline: 0;
   cursor: pointer;
@@ -256,12 +236,12 @@ select {
   font-size: 16px;
 }
 
-#removebtn :hover{
+.remove-button :hover{
   background: 0 0;
   color: #ff4742;
 }
 
-#readbutton {
+.read-button {
   text-align: center;
   outline: 0;
   cursor: pointer;
@@ -273,10 +253,16 @@ select {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
+  min-width: 75px;
 }
 
-#readbutton  :hover {
+.read-button :hover {
   transition: all .1s ease;
   box-shadow: 0 0 0 0 #fff, 0 0 0 3px #2ECC71;
 }
 
+#tableCheckbox {
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
