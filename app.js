@@ -40,6 +40,9 @@ function displayBooks() {
 displayBooks();
 
 
+
+
+// Renders books
 function renderBooks() {
   // Clear existing table rows after entering a new book
   while (bookTable.rows.length > 1) {
@@ -50,31 +53,13 @@ function renderBooks() {
     let book = myLibrary[i];
     let newRow = document.createElement("tr");
 
-    let titleCell = document.createElement("td");
-    titleCell.textContent = book.title;
-    newRow.appendChild(titleCell);
-
-    let authorCell = document.createElement("td");
-    authorCell.textContent = book.author;
-    newRow.appendChild(authorCell);
-
-    let pagesCell = document.createElement("td");
-    pagesCell.textContent = book.pages;
-    newRow.appendChild(pagesCell);
-
-    let readCell = document.createElement("td");
-    let readButton = document.createElement("button");
-    readButton.className = "read-button";
-    readButton.textContent = book.read;
-    readCell.appendChild(readButton);
-    newRow.appendChild(readCell);
-
-    let removeCell = document.createElement("td");
-    let removeButton = document.createElement("button");
-    removeButton.className = "remove-button";
-    removeButton.textContent = "Remove";
-    removeCell.appendChild(removeButton);
-    newRow.appendChild(removeCell);
+    newRow.innerHTML = `
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+      <td>${book.pages}</td>
+      <td><button class="read-button">${book.read}</button></td>
+      <td><button class="remove-button">Remove</button></td>
+    `;
 
     bookTable.appendChild(newRow);
   }
@@ -82,7 +67,7 @@ function renderBooks() {
 
 
 
-
+// Sumbit button on the form
 document.getElementById("addbook").addEventListener("submit", function(event) {
   event.preventDefault();
   addBookToLibrary();
@@ -92,7 +77,7 @@ document.getElementById("addbook").addEventListener("submit", function(event) {
 
 
 
-
+// Clears form after book is submitted
 function clearForm() {
   document.getElementById("title").value = "";
   document.getElementById("author").value = "";
@@ -102,9 +87,8 @@ function clearForm() {
 }
 
 
-
+// Hides and Displays form
 addbookbtn.addEventListener("click", displayForm);
-
 function displayForm() {
   if (form.style.display === "none") {
     form.style.display = "block";
@@ -115,7 +99,7 @@ function displayForm() {
 
 
 
-
+// Handles the actions of marking a book as read or not read and removing a book from the library, both triggered by clicking the buttons in the table rows.
 bookTable.addEventListener("click", function(event) {
   if (event.target.classList.contains("read-button")) {
     let button = event.target;
