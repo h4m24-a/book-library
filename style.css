@@ -256,7 +256,7 @@ select {
   min-width: 75px;
 }
 
-.read-button :hover {
+.readbtn :hover {
   transition: all .1s ease;
   box-shadow: 0 0 0 0 #fff, 0 0 0 3px #2ECC71;
 }
