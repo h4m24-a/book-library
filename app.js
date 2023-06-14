@@ -33,14 +33,8 @@ function addBooksManually() {
   myLibrary.push(book1, book2, book3);
 }
 
-// Render the books in the table
-function displayBooks() {
-  addBooksManually();
-  renderBooks();
-}
+addBooksManually();
 
-// Call the displayBooks function to show the books in the table
-displayBooks();
 
 
 
@@ -86,6 +80,7 @@ function clearForm() {
   document.getElementById("author").value = "";
   document.getElementById("pages").value = "";
   document.getElementById("readstatus").value = "Read";
+  addbookbtn.textContent = "+ Add Book"
   form.style.display = "none";
 }
 
@@ -95,8 +90,10 @@ addbookbtn.addEventListener("click", displayForm);
 function displayForm() {
   if (form.style.display === "none") {
     form.style.display = "block";
+    addbookbtn.textContent = "Exit"
   } else {
     form.style.display = "none";
+    addbookbtn.textContent = "+ Add Book"
   }
 }
 
@@ -120,5 +117,6 @@ bookTable.addEventListener("click", function(event) {
 
 Book.prototype.toggleReadStatus = function() {
   this.read = this.read === "Read" ? "Not Read" : "Read";
+  
 };
 renderBooks();

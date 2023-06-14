@@ -163,7 +163,6 @@ select {
 	color: #222;
   margin-top: 25px;
   border: 1px solid black;
-	
 }
 
 #booktable {
@@ -172,9 +171,10 @@ select {
   width: 110%;
 }
 
-#booktable td, #booktable th {
+#booktable td {
   border: 1px solid #ddd;
   padding: 12px;
+  font-size: 18px;
 }
 
 #booktable tr{background-color: #f4f6fb;}
@@ -187,11 +187,11 @@ select {
   text-align: left;
   background-color: #2E4053;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   font-family: 'Rubik', Helvetica, sans-serif;
 }
 
-.remove-button {
+.removeBtn {
   text-align: center;
   outline: 0;
   cursor: pointer;
@@ -202,15 +202,10 @@ select {
   padding: 2px;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
-.remove-button :hover{
-  background: 0 0;
-  color: #ff4742;
-}
-
-.read-button {
+.readBtn {
   text-align: center;
   outline: 0;
   cursor: pointer;
@@ -221,11 +216,6 @@ select {
   padding: 2px;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   min-width: 75px;
-}
-
-.readbtn :hover {
-  transition: all .1s ease;
-  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #2ECC71;
 }
