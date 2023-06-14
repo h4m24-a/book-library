@@ -2,7 +2,9 @@ const addbookbtn = document.getElementById("new-book-btn");
 const form = document.getElementById("form");
 const bookTable = document.getElementById("booktable");
 
+
 let myLibrary = [];
+
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -21,6 +23,7 @@ function addBookToLibrary() {
   let newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
 }
+
 
 function addBooksManually() {
   let book1 = new Book("The Catcher in the Rye", "J.D. Salinger", 224, "Read");
@@ -53,12 +56,12 @@ function renderBooks() {
     let book = myLibrary[i];
     let newRow = document.createElement("tr");
 
-    newRow.innerHTML = `
-      <td>${book.title}</td>
+    newRow.innerHTML = 
+    ` <td>${book.title}</td>
       <td>${book.author}</td>
       <td>${book.pages}</td>
-      <td><button class="read-button">${book.read}</button></td>
-      <td><button class="remove-button">Remove</button></td>
+      <td><button class="readBtn">${book.read}</button></td>
+      <td><button class="removeBtn">Remove</button></td>
     `;
 
     bookTable.appendChild(newRow);
@@ -99,20 +102,23 @@ function displayForm() {
 
 
 
-// Handles the actions of marking a book as read or not read and removing a book from the library, both triggered by clicking the buttons in the table rows.
+// Handles the actions of marking a book as read or not read and removing a book from the library.
 bookTable.addEventListener("click", function(event) {
-  if (event.target.classList.contains("read-button")) {
-    let button = event.target;
-    let bookRow = button.parentNode.parentNode;
-    let rowIndex = bookRow.rowIndex - 1;
-    let book = myLibrary[rowIndex];
-    book.read = book.read === "Read" ? "Not Read" : "Read";
-    renderBooks();
-  } else if (event.target.classList.contains("remove-button")) {
-    let button = event.target;
-    let bookRow = button.parentNode.parentNode;
-    let rowIndex = bookRow.rowIndex - 1;
+  const button = event.target;
+  const bookRow = button.closest("tr");
+  const rowIndex = bookRow.rowIndex - 1;
+  const book = myLibrary[rowIndex];
+  book.toggleReadStatus();
+  
+ if (button.classList.contains("removeBtn")) {
     myLibrary.splice(rowIndex, 1);
-    renderBooks();
   }
+  renderBooks();
 });
+
+
+
+Book.prototype.toggleReadStatus = function() {
+  this.read = this.read === "Read" ? "Not Read" : "Read";
+};
+renderBooks();
