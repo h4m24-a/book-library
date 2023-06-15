@@ -219,3 +219,26 @@ select {
   font-size: 16px;
   min-width: 75px;
 }
+
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 500px) {
+  #form-wrapper {
+    top: 75%;
+    left: 60%;
+    width: 90%;
+    height: 50%;
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #form-wrapper {
+    top: 80%;
+    left: 70%;
+    width: 90%;
+    height: 70%;
+    margin-top: 0rem;
+  }
+}
