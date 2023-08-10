@@ -25,6 +25,10 @@ ul {
   color: black;
   height: 100px;
   font-family: "Poppins", Verdana;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px red;
 }
 
 .navbar .logo {
@@ -32,32 +36,14 @@ ul {
   font-size: 30px;
 }
 
-.navbar a {
-  color: black;
-  text-decoration: none;
-  font-size: 28px;
-  font-weight: bold;
-  font-family: "Poppins", Verdana;
-}
-
-.navbar a:hover {
-  color: #c3c608;
-}
 
 .navbar .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-.navbar ul {
-  display: flex;
-}
-
-.navbar ul li {
-  margin-left: 20px;
-}
 
 .bookshelf .container {
   margin-top: 1rem;
@@ -222,23 +208,88 @@ select {
 
 
 /* Mobile Responsive */
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1500px) {
   #form-wrapper {
-    top: 75%;
-    left: 60%;
-    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
     height: 50%;
-    margin-top: 0rem;
+    padding: 30px;
   }
 }
 
+@media screen and (max-width: 950px) {
+  #form-wrapper {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 50%;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #form-wrapper {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 50%;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #form-wrapper {
+    top: 65%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 50%;
+    padding: 50px;
+    background: #d4ebd9;
+    border-radius: 15px;
+    margin-top: 0;
+  }
+
+  .navbar .logo {
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto; 
+  }
+
+  .newbook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+
+
 @media screen and (max-width: 380px) {
   #form-wrapper {
-    top: 80%;
+    top: 70%;
     left: 70%;
+    transform: translate(-50%, -50%);
     width: 90%;
-    height: 70%;
-    margin-top: 0rem;
+    height: 50%;
+    margin-top: 0;
   }
 }
